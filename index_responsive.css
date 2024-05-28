@@ -1,20 +1,20 @@
 @media screen and (max-width: 600px) {
-    nav {
+    #vertical-nav {
         width: 75px;
     }
-    nav h2 {
+    #vertical-nav h2 {
         font-size: 14px;
     }
-    nav #logo {
+    #vertical-nav #logo {
         height: 50px;
     }
-    nav .nav-element {
+    #vertical-nav .nav-element {
         padding: 15px;
     }
-    nav .nav-element p{
+    #vertical-nav .nav-element p{
         display: none;
     }
-    nav .nav-element .icon {
+    #vertical-nav .nav-element .icon {
         height: 30px;
         display: flex;
         margin: auto;

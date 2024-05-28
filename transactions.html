@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="vertical-nav.css">
+        <link rel="stylesheet" href="horizontal-nav.css">
+        <link rel="stylesheet" href="transactions.css">
+    </head>
+    <bod>
+        <nav id="horizontal-nav">
+            <a href="index.html" id="logo-a">
+                <img src="elements/png/code_eagle_no_text-removebg-preview.png" id="logo">
+                <h3>C.E. Bank</h3>
+            </a>
+
+            <ul>
+                <li>
+                    <div id="vl"></div>
+                </li>
+                <li> 
+                    <img src="/elements/svg/icons8-search.svg" class="icon">
+                </li>
+                <li>
+                    <div id="vl"></div>
+                </li>
+                <li>
+                    <img src="/elements/svg/icons8-notification.svg" class="icon">
+                </li>
+                <li>
+                    <div id="vl"></div>
+                </li>
+                <li>
+                    <div id="hn-user-div">
+                        <img src="/elements/png/icons8-user-96.png">
+                        <div>
+                            <h3>Name</h3>
+                            <p>info@gmail.com</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="main-window">
+            <nav id="vertical-nav">
+                <a href="index.html">
+                    <div class="nav-element" href="https://www.pinterest.com/pin/913386368165704906/">
+                        <img src="elements/svg/icons8-home.svg" class="icon">
+                        <p>Acasa</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="nav-element">
+                        <img src="elements/png/icons8-account-48.png" class="icon">
+                        <p>Depozite</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="nav-element" id="active">
+                        <img src="elements/png/icons8-card-exchange-48.png" class="icon">
+                        <p>Tranzactii</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="nav-element">
+                        <img src="elements/png/icons8-initiate-money-transfer-48.png" class="icon">
+                        <p>Plati</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="nav-element">
+                        <img src="elements/png/icons8-window-other-48.png" class="icon">
+                        <p>Altele</p>
+                    </div>
+                </a>
+            </nav>
+
+            <section id="transactions-main-section">
+                <div id="option-bar">
+                    <select name="cardSelect" id="select-card-comboBox">
+                        <option value="a">Toate cardurile</option>
+                        <option value="card1">Card 1</option>
+                        <option value="card2">Card 2</option>
+                    </select>
+
+                    <select name="orderBy" id="order-by-comboBox">
+                        <option value="d">Implicit</option>
+                        <option value="date">Data</option>
+                        <option value="card-nr">Card</option>
+                    </select>
+
+                    <div id="option-bar-right-buttons">
+                        <input name="search-area" id="search-area" placeholder="Cauta dupa...">
+                        <img src="/elements/png/icons8-filter-100.png">
+                    </div>
+                </div>
+
+                <section id="transactions-section">
+                    <table id="transactions-table">
+                        <tr id="header-row">
+                            <th>Data</th>
+                            <th>Descriere</th>
+                            <th>Suma</th>
+                            <th>Numar Card</th>
+                        </tr>
+                        <tr>
+                            <td>5/28/2024</td>
+                            <td>Descriere tranzactie 1</td>
+                            <td>+3400.00 MDL</td>
+                            <td>1234 5678 9876 5432</td>
+                        </tr>
+                        <tr>
+                            <td>5/27/2024</td>
+                            <td>Descriere tranzactie 2</td>
+                            <td>+89.67 MDL</td>
+                            <td>1234 5678 9876 5432</td>
+                        </tr>
+                        <tr>
+                            <td>5/18/2024</td>
+                            <td>Descriere tranzactie 3</td>
+                            <td>-456.00 MDL</td>
+                            <td>1234 5678 9876 5432</td>
+                        </tr>
+                        <tr>
+                            <td>4/13/2024</td>
+                            <td>Descriere tranzactie 4</td>
+                            <td>+59.00 MDL</td>
+                            <td>1234 5678 9876 5432</td>
+                        </tr>
+                        <tr>
+                            <td>2/23/2024</td>
+                            <td>Descriere tranzactie 5</td>
+                            <td>-213.50 MDL</td>
+                            <td>1234 5678 9876 5432</td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+        </section>
+    </bod>
+</html>

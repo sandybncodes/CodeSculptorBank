@@ -1,0 +1,82 @@
+#transactions-main-section {
+    flex-grow: 1;
+    background-color: #31363F;
+    padding: 10px;
+}
+
+#transactions-main-section #option-bar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#transactions-main-section #option-bar #select-card-comboBox {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    border-style: none;
+    background-color: #222831;
+    color: whitesmoke;
+}
+
+
+#transactions-main-section #option-bar #order-by-comboBox {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    border-style: none;
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+#transactions-main-section #option-bar #order-by-comboBox option {
+    background-color: #31363F;
+}
+
+#transactions-main-section #option-bar #option-bar-right-buttons {
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+#transactions-main-section #option-bar #option-bar-right-buttons #search-area {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+#transactions-main-section #option-bar #option-bar-right-buttons img {
+    height: 30px;
+}
+
+#transactions-main-section #transactions-section {
+    padding: 10px;
+}
+
+#transactions-main-section #transactions-section #transactions-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: inherit;
+}
+
+#transactions-main-section #transactions-section #transactions-table, th, td {
+    text-align: left;
+}
+
+#transactions-main-section #transactions-section #transactions-table #header-row {
+    background-color: #222831;
+    color: gainsboro;
+}
+
+#transactions-main-section #transactions-section #transactions-table #header-row th {
+    padding: 10px;
+}
+
+#transactions-main-section #transactions-section #transactions-table td {
+    padding: 10px;
+    color: whitesmoke;
+}
+
+#transactions-main-section #transactions-section #transactions-table tr:hover {
+    background-color: #222831;
+}

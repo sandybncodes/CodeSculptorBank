@@ -3,74 +3,19 @@ body {
     color: white;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#main-window {
+    margin: 0;
     display: flex;
     flex-direction: row; /* Ensure the body is a row flex container */
     height: 100vh; /* Ensure the body takes full viewport height */
 }
 
-nav {
-    background-color: #31363F;
-    margin: 0;
-    width: 150px; /* Fixed width for the nav */
-    flex-shrink: 0; /* Prevent the nav from shrinking */
-}
-
-nav #logo {
-    display: flex;
-    margin: auto;
-    user-select: none;
-    height: 100px;
-    border-radius: 50%;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-}
-
-nav hr {
-    border-width: 0;
-    height: 1px;
-    background-color: #76ABAE;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-nav #active {
-    background-color: #222831;
-}
-
-nav .nav-element {
-    align-items: center;
-    color: white;
-    display: flex;
-    user-select: none;
-    padding: 5px;
-}
-
-nav .nav-element:hover {
-    background-color: #76ABAE;
-    color: #31363F;
-}
-
-nav #active:hover {
-    background-color: #76ABAE;
-    color: #31363F;
-}
-
-nav .nav-element p {
-    padding: 0;
-}
-
-nav .icon {
-    height: 20px;
-    padding: 5px;
-}
-
 /*=== main section ===*/
 #main-section {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #222831;
+    background-color: #31363F;
     padding: 10px;
     flex-grow: 1; /* Make the main section take up the remaining space */
 }
@@ -83,7 +28,8 @@ nav .icon {
 #main-section #main-section-b #home-details-section {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: space-evenly;
+    /*flex-direction: row;*/
     padding: 10px;
 }
 
@@ -91,15 +37,50 @@ nav .icon {
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
-    background-color: #76ABAE;
-    color: #31363F;
+    background-image: linear-gradient(130deg, #222831, #D10E0E);
+    color: whitesmoke;
     margin: 10px;
     padding: 5px;
-    flex-grow: 1;
+    width: 500px;
     user-select: none;
 }
 
-#main-section #main-section-b #home-details-section .card-box .card-title-bar {
+#main-section #main-section-b #home-details-section .card-box:hover {
+    border-color: #D10E0E;
+}
+
+#main-section #main-section-b #home-details-section .card-box #line-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#main-section #main-section-b #home-details-section .card-box #line-1 img {
+    height: 50px;
+}
+
+#main-section #main-section-b #home-details-section .card-box #line-1 h3 {
+    font-weight: normal;
+}
+
+#main-section #main-section-b #home-details-section .card-box #line-2 {
+    padding-left: 10px;
+}
+
+#main-section #main-section-b #home-details-section .card-box #line-3 {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+
+#main-section #main-section-b #home-details-section .card-box #line-3 h3 {
+    font-weight: normal;
+}
+
+/*#main-section #main-section-b #home-details-section .card-box .card-title-bar {
     display: flex;
 }
 
@@ -108,9 +89,9 @@ nav .icon {
     background-color: #222831;
     margin-left: 5px;
     margin-right: 5px;
-}
+}*/
 
-#main-section #main-section-b #home-details-section .card-box .card-title-bar h3 {
+/*#main-section #main-section-b #home-details-section .card-box .card-title-bar h3 {
     margin: 5px;
     font-weight: normal;
 }
@@ -128,4 +109,4 @@ nav .icon {
     font-weight: normal;
     font-size: 30px;
     margin: 10px;
-}
+}*/
