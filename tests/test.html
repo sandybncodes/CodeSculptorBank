@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="test.js"></script>
-    </head>
-    <body>
-        <p> test text</p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table id="transactionTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Fetch the JSON data and populate the table
+        fetch('transactions.json')
+            .then(response => response.json())
+            .then(data => populateTable(data))
+            .catch(error => console.error('Error fetching JSON data:', error));
+
+        function populateTable(transactions) {
+            const tableBody = document.getElementById('transactionTable').getElementsByTagName('tbody')[0];
+            transactions.forEach(transaction => {
+                const row = tableBody.insertRow();
+                const idCell = row.insertCell(0);
+                const dateCell = row.insertCell(1);
+                const amountCell = row.insertCell(2);
+                const descriptionCell = row.insertCell(3);
+
+                idCell.textContent = transaction.id;
+                dateCell.textContent = transaction.date;
+                amountCell.textContent = transaction.amount;
+                descriptionCell.textContent = transaction.description;
+
+                // Add event listener to the row
+                row.addEventListener('click', function() {
+                    const transactionDetails = JSON.stringify(transaction);
+                    const newWindow = window.open('transaction-details.html');
+                    newWindow.onload = function() {
+                        newWindow.document.body.innerHTML = `
+                            <h1>Transaction Details</h1>
+                            <p><strong>ID:</strong> ${transaction.id}</p>
+                            <p><strong>Date:</strong> ${transaction.date}</p>
+                            <p><strong>Amount:</strong> ${transaction.amount}</p>
+                            <p><strong>Description:</strong> ${transaction.description}</p>
+                        `;
+                    };
+                });
+            });
+        }
+    </script>
+</body>
 </html>

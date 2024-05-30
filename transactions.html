@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="vertical-nav.css">
         <link rel="stylesheet" href="horizontal-nav.css">
         <link rel="stylesheet" href="transactions.css">
+        <link rel="icon" type="image/x-icon" href="/elements/png/code_eagle_no_text-removebg-preview.png">
+
+        <script src="getTransactions.js"></script>
     </head>
     <bod>
         <nav id="horizontal-nav">
@@ -98,13 +101,19 @@
 
                 <section id="transactions-section">
                     <table id="transactions-table">
-                        <tr id="header-row">
-                            <th>Data</th>
-                            <th>Descriere</th>
-                            <th>Suma</th>
-                            <th>Numar Card</th>
-                        </tr>
-                        <tr>
+                        <thead>
+                            <tr id="header-row">
+                                <th>Numar Tranzactie</th>
+                                <th>Data</th>
+                                <th>Descriere</th>
+                                <th>Suma</th>
+                                <th>Numar Card</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be populated here by JavaScript -->
+                        </tbody>
+                        <!--<tr>
                             <td>5/28/2024</td>
                             <td>Descriere tranzactie 1</td>
                             <td>+3400.00 MDL</td>
@@ -133,7 +142,7 @@
                             <td>Descriere tranzactie 5</td>
                             <td>-213.50 MDL</td>
                             <td>1234 5678 9876 5432</td>
-                        </tr>
+                        </tr>-->
                     </table>
                 </section>
             </section>
